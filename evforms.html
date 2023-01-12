@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="#" method="post" name="formulario">
+        <div>
+            <label for="tarefa">Tarefa</label>
+            <input type="text" name="tarefa">
+        </div>
+
+        <div>
+            <label for="duracao">Quanto tempo</label>
+            <select name="duracao" id="duracao">
+                <option value="1">1 Dias</option>
+                <option value="2">2 Dias</option>
+                <option value="3">3 Dias</option>
+            </select>
+        </div>
+    </form>
+
+    <script>
+        let tarefa = document.querySelector('[name="tarefa"]')
+        let duracao = document.querySelector('[name="duracao"]')
+
+        // evento change
+        // o valor que está no input é alterado
+        tarefa.addEventListener('change', () => {
+            console.log('alterado')
+        })
+
+        duracao.addEventListener('change', () => {
+            console.log('select alterado')
+        })
+
+        // evento input
+        // toda vez que algo for inserido um conteúdo
+        tarefa.addEventListener('input', () => {
+            console.log('introduzido pelo input')
+        })
+
+        // CUT, COPY E PASTE
+        tarefa.addEventListener('cut', () => {
+            console.log('recortado')
+        })
+
+        tarefa.addEventListener('copy', () => {
+            console.log('copiado')
+        })
+
+        tarefa.addEventListener('paste', () => {
+            console.log('colado')
+        })
+
+        // TODOS ESSES EVENTOS PODERIAM SER ADICIONADOS NO HTML
+        // <input type='text' onpaste="funcao()">
+    </script>
+</body>
+</html>

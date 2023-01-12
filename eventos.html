@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            margin: 50px auto;
+        }
+
+        .centro {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="centro">
+        <h1>Texto original HTML</h1>
+
+        <!-- onclick permite executar código JS -->
+        <button onclick="alterarTexto()">Clique aqui</button>
+
+        <p>Também posso clicar aqui</p>
+    </div>
+    <script>
+        /*
+        Evento: 
+        - Permite criar a reatividade de comportamentos
+        - Um acontecimento, eh um sinal que algo aconteceu na nossa página
+        Exemplo: onclick
+        - EventHandler: Uma função que sempre é executada quando o evento acontecer.
+        - Eventos: atributos de elementos HTML
+
+        - algo aconteceu sem o recarregamento da página.
+
+        */
+
+        function alterarTexto(){
+            document.querySelector('h1').textContent = 'texto alterado no evento onclick'
+        }
+        
+        // associar um evento ao parágrafo
+        document.querySelector('p').onclick = function () {
+            document.querySelector('p').textContent = 'texto alterado no parágrafo'
+        }
+    </script>
+</body>
+</html>

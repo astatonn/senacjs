@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .noticia {
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid rgb(150, 150, 150);
+            background-color: rgb(240, 240, 240);
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, .5);
+            padding: 20px;
+            margin: 50px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="noticia">
+        <h1>Título da Notícia</h1>
+        <h3 id="sumario">Sumário da Notícia</h3>
+        <img src="news_2.jpg">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quibusdam, voluptas alias saepe facilis nesciunt ipsum quasi. Corrupti ea reprehenderit nam molestias suscipit quaerat laborum veritatis nemo! In, veniam corporis.</p>
+    </div>
+
+    <script>
+        /* conjunto de funções sobre os atributos */
+
+        let elemento = document.querySelector('h3')
+
+        /*
+         hasAtribute -> verifica se o atributo existe no elemento
+
+        */
+
+        if (elemento.hasAttribute('id')){
+            console.log('sim')
+        }
+
+        if (elemento.hasAttribute('class')){
+            console.log('sim')
+        }
+
+        /* getAtribute -> obtem o valor do atributo */
+        console.log(elemento.getAttribute('id'))
+
+        /* setAtribute -> definir um atributo que o elemento não tem */
+        elemento.setAttribute('title', 'título do sumário')
+
+        // remove atribute -> remove um atributo de uma tag
+        let imagem = document.querySelector('img')
+        imagem.removeAttribute('src')
+
+        // coleção de todos os atributos de um determiado elemento
+        // pode ser acessado pelo índice ou pela sua chave alfanumérica
+        console.log(elemento.attributes)
+
+        
+
+    </script>
+</body>
+</html>

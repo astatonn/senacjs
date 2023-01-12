@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top {
+            background-color: rebeccapurple;
+        }
+        .left {
+            background-color: steelblue;
+        }
+        .right {
+            background-color: greenyellow;
+        }
+        .bottom {
+            background-color: orangered;
+        }
+
+        .central {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .btn {
+            border: 1px solid seagreen;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #ccc;
+        }
+
+        .newElement {
+            background-color: tomato;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="central">
+        <button class="btn">Left</button>
+        <div class="col">
+            <button class="btn">Top</button>
+            <span>Centro</span>
+            <button class="btn">Bottom</button>
+        </div>
+        <button class="btn" >Right</button>
+    </div>
+
+  
+</body>
+</html>

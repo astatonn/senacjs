@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="#" method="post">
+    <div>
+        <label for="usuario">Usuário</label>
+        <input type="text" name="usuario" id="usuario">
+    </div>
+
+    <div>
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha">
+    </div>
+
+    <div><input type="submit" value="Entrar"></div>
+    </form>
+    
+    <script>
+        // formulários possuem 'um mundo pró'
+        
+        // ter acesso aos atributos do formulários
+
+        // Obtem todos os formulários existentes na página HTML
+        // retorna uma coleção
+        console.log(document.forms)
+
+        console.log(document.forms[0].usuario.value)
+
+        // alterar <form action="#" method="post" name="frm_login">
+            console.log(document.forms.frm_login)
+            console.log(document.forms.frm_login.usuario.value)
+            console.log(document.forms.frm_login.senha.value)
+    </script>
+</body>
+</html>

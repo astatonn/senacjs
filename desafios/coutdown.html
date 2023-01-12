@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>Count Down</title>
+    <style>
+        *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('./bg.jpg');
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #00000080;
+}
+
+.title {
+    font-size: calc(10px + 3vw);
+}
+
+.title p {
+    font-size: calc(10px + 1vw);
+}
+
+.countdown{
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.countdown h1{
+    font-size: calc(10px + 8vw);
+    text-shadow: 0 0 10px  whitesmoke;
+}
+
+.button{
+    background-color: whitesmoke;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border: solid 2px whitesmoke;
+}
+
+.button:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class='title'>
+            <h1>LIVE</h1>
+            <p>Em breve</p>
+        </div>
+
+        <div class="countdown">
+            <div >
+                <h1 id="dias">00</h1>
+                <p>Dias</p>
+            </div>
+            <div>
+                <h1 id="horas">00</h1>
+                <p>Horas</p>
+            </div>
+            <div>
+                <h1  id="minutos">00</h1>
+                <p>Minutos</p>
+            </div>
+            <div>
+                <h1 id="segundos">00</h1>
+                <p>Segundos</p>
+            </div>
+        </div>
+
+        <div class='button'>
+            <p>Cadastre-se</p>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

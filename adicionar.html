@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid lightblue;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        p {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Dentro do DIV
+    </div>
+
+    <script>
+        // métodos para facilitar a inserção de conteúdo
+
+        let div = document.querySelector('.container')
+
+        // insertAdjacenteText
+
+        // fora do div
+        // equivale ao aaaa
+        div.insertAdjacentText('beforebegin', 'antes do div')
+
+        // antes do conteúdo
+        // equivale ao bbbb
+        div.insertAdjacentText('afterbegin', 'antes do conteúdo')
+
+        // depois do conteúdo
+        // equivale ao ccc
+        div.insertAdjacentText('beforeend', 'depois do conteúdo')
+
+        // depois da div
+        // equivale ao dddd
+        div.insertAdjacentText('afterend', 'depois do div')
+
+        // insertAdjcenterHTML
+        // interpreta como html
+        div.insertAdjacentHTML('beforebegin', '<p>AAAA</p>')
+        div.insertAdjacentHTML('afterbegin', '<p>BBBB</p>')
+        div.insertAdjacentHTML('beforeend', '<p>CCCC</p>')
+        div.insertAdjacentHTML('afterend', '<p>DDDD</p>')
+
+        // inserAdjcententElement
+        let paragrafo = document.createElement('p')
+        p.innerText = 'texto'
+
+        div.insertAdjacentElement('beforebegin', p)
+        div.insertAdjacentElement('afterbegin', p)
+        div.insertAdjacentElement('beforeend', p)
+        div.insertAdjacentElement('afterend', p)
+
+
+    </script>
+</body>
+</html>

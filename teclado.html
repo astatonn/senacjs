@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="texto">
+    <p>Tenho que escrever 'senac'</p>
+
+    <script>
+        // KEY DOWN - QUANDO APERTO UMA TECLA
+        // KEY UP - QUANDO SOLTO UMA TECLA
+
+        let el = document.querySelector('#id')
+
+        el.addEventListener('keydown', () => {
+            console.log('pressionou')
+
+            //verificar qual tecla foi pressionada
+            console.log(event.target.value)
+
+            var value = event.target.value
+            if (value == 'senac') {
+                document.querySelector('p').style.display = 'none'
+            }
+
+            else {
+                document.querySelector('p').style.display = 'block'
+            }
+
+
+            })
+
+        el.addEventListener('keydown', (e) => {
+            if(e.key == 'a') {
+                // evita que a letra apareça
+                // serve para evitar que o usuário possa inserir algumas informações
+                e.preventDefault()
+            }
+        })
+        el.addEventListener('keyup', () => {
+            console.log('largou')
+        })
+    </script>
+</body>
+</html>

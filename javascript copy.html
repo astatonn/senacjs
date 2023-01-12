@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="titulo">Este texto tem <i><u>importância</u></i></h3>
+    
+    <div class="noticia">
+        <h1>Título da notícia <strong>um</strong></h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, nesciunt reprehenderit. Laboriosam sit tenetur, laborum molestiae perferendis accusantium natus aliquid dolorem? Rerum atque sint, aliquid optio omnis delectus eius quasi?</p>
+    </div>
+
+    <div>
+        <h1>Título da Notícia 2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, recusandae aspernatur eaque impedit magnam quod iusto? Sit a modi ducimus tenetur atque quo animi odit doloribus? Dolorum tenetur dolores corrupti.</p>
+    </div>
+
+    <!-- adicionando evento na tag html
+    pode ser qualquer comando de js
+    -->
+    <img src="" alt="notícias" id="#noticias" onclick="executar()">
+
+    <!-- js -->
+    <script>
+        // usando funções e eventos para alterar o conteúdo
+
+        document.querySelector('#titulo').innerText = 'novo título'
+
+        /*
+        eventos são ações executadas pelo usuário em 
+        determinados momentos que podem ser utilziados
+        para compor uma ação de js
+    
+        */
+
+        function executar(){
+            let e = document.querySelector('#titulo')
+            e.innerText = 'novo titulo'
+            e.style.color = 'blue'
+        }
+        
+        /*
+        adicionar um evento para melhor interação
+        executar um evento no clique da imagem
+        */
+
+
+        executar()
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="titulo">Este texto tem <i><u>importância</u></i></h3>
+    <div class="noticia">
+        <h1>Título da notícia <strong>um</strong></h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, nesciunt reprehenderit. Laboriosam sit tenetur, laborum molestiae perferendis accusantium natus aliquid dolorem? Rerum atque sint, aliquid optio omnis delectus eius quasi?</p>
+    </div>
+
+    <div>
+        <h1>Título da Notícia 2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, recusandae aspernatur eaque impedit magnam quod iusto? Sit a modi ducimus tenetur atque quo animi odit doloribus? Dolorum tenetur dolores corrupti.</p>
+    </div>
+
+    <img src="" alt="notícias" id="#noticias">
+
+    <!-- js -->
+    <script>
+        /*
+            NO JAVASCRIPT É MUITO COMUM TROCAR O USO DO DOCUMENT.GETELEMENTBYID
+            POR QUERYSELECTOR POIS EH SEMPRE A MESMA FUNÇÃO E PERMITE BUSCAR
+            VÁRIOS ELEMENTOS DIFERENTES (ID, CLASSE, TAG, ETC)
+        */
+
+        // buscar o elemento pelo id
+        let elemento = document.querySelector("#titulo")
+        
+        // buscar o elemento pela class
+        let elemento2 = document.querySelector('.noticia')
+
+        // buscar todos os divs
+        let element3 = document.querySelectorAll('div')
+
+        // editar os parâmetros da tag u
+        let elemento4 = document.querySelector('#titulo > i > u')
+        elemento4.style.color = 'red'
+        elemento4.style.backgroundColor = 'blue'
+
+        /* Diferenças entre:
+        # innerHTML 
+        # outerHTML
+        # innerText
+
+        let elemento = document.querySelector('.noticia > h1')
+        console.log(elemento.innerText) - apenas texto
+        console.log(elemento.innerHTML) - texto e outros elementos html internos
+        console.log(elemento.outerHTML) - toda a estrutura html
+
+        elemento.innerText = 'novo <u>Texto</u>'
+
+        conteúdo com o texto já editado
+        elemento.innerHTML = 'novo <u>texto</u>'
+        
+
+        # Atributos
+
+        */
+        let imagem = document.querySelector('#noticias')        
+        // mostrar todos os atributos da imagem
+        console.log(imagem)
+
+        // carregar outra imagem
+        imagem.src = 'news_2.jpg'
+
+        // valor do alt
+        console.log(imagem.alt)
+
+        //alterar outros atributos
+        document.querySelector('#titulo').innerHTML = imagem.alt
+        
+        /*
+        Operações no console
+        imagem.alt no console para mostrar o retorno
+
+        
+
+
+        */
+
+
+        
+    </script>
+</body>
+</html>

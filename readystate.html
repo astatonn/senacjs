@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+    // verificar apenas quando a página estiver pronta
+    document.querySelector('h1').textContent = 'texto alterado' 
+
+    document.addEventListener('readystatechange', () => {
+        console.log('state')
+        // existem 3 estados interactive, loading e o complete
+
+        console.log(document.readyState)
+        if (document.readyState == 'complete') {
+            document.querySelector('h1').textContent = 'texto alterado'
+        }
+    })
+
+    // método alternativo
+    // NÃO SIGNIFICA QUE O DOCUMENTO ESTIVER TOTALMENTE CARREGADO
+    // Só vai funcionar para as tags html forem carregadas
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('documento carregado')
+    })
+
+    // SÓ APÓS O CARREGAMENTO DO RESTO DO RESTO DO CONTEÚDO (CSS, IMG, ETC)
+    window.addEventListener('load', () => {
+        console.log('documento completo')
+    })
+</script>
+<body>
+
+    <h1>Conteúdo</h1>
+
+    
+    
+</body>
+</html>

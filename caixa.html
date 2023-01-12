@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .caixa {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 50px auto;
+            width: 400px;
+            padding: 20px;
+            border: 1px solid gray;
+            text-align: center;
+        }
+
+        .alerta {
+            padding: 5px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caixa">
+        <p>Neste div apenas existe um parágrafo</p>
+    </div>
+
+    <!-- só cirar o botão após a linha 49 -->
+    <button onclick="executar()"></button>
+    <script>
+        /* exercício: fazer uma mensagem aparecer dentro
+        da div com classe caixa apenas quando existir um erro.
+
+        mensagem: Esta é uma mensagem de alerta
+        classe: alerta
+        */
+
+        // criar o novo elemento que vamos adicionar
+        let novo_elemento = document.createElement('p')
+        // adicionar características
+        novo_elemento.className = 'alerta'
+        novo_elemento.innerText = 'Esta é uma mensagem de alerta'
+
+        // adicionar o novo elemento ao div existente
+        let elemento = document.querySelector('div')
+        elemento.appendChild(novo_elemento)
+
+        function executar() {
+            // criar o novo elemento que vamos adicionar
+            let novo_elemento = document.createElement('p')
+            // adicionar características
+            novo_elemento.className = 'alerta'
+            novo_elemento.innerText = 'Esta é uma mensagem de alerta'
+
+            // adicionar o novo elemento ao div existente
+            let elemento = document.querySelector('div')
+            elemento.appendChild(novo_elemento)
+
+            // CADA NOVO CLICK APARECE UMA NOVA DIV
+        }
+
+        /* AO TENTAR USAR
+        elemento.appendChild(novo_elemento)
+        elemento.appendChild(novo_elemento)
+        elemento.appendChild(novo_elemento)
+        elemento.appendChild(novo_elemento)
+
+        só aparece uma div porque o objeto foi criado dentro da função
+        depois ele foi extinto, para solucionar o problema usamos
+        elemento.appendChild(novo_elemento)
+        elemento.appendChild(novo_elemento.cloneNode(true))
+        elemento.appendChild(novo_elemento.cloneNode(true))
+        elemento.appendChild(novo_elemento.cloneNode(true))
+''
+        */
+
+
+    </script>
+</body>
+
+</html>

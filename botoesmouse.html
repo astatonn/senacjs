@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            padding: 30px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        Este é meu elemento
+    </div>    
+
+    <script>
+        // selecionar o botão clicado
+        // eventos relacionados aos clicks existe um atributo button associado
+        // normalmente é o click (esquerdo) contextMenu (right)
+
+        document.querySelector('div').addEventListener('mousedown', () => {
+            console.log('click')
+
+            // associar o evento à um button
+            console.log(event.button)
+
+            // pressionar tecla e o botão mouse
+
+            if(event.shiftKey){
+                console.log('OK - SHIFT')
+            }
+
+            if (event.altKey){
+                console.log('OK - ALT')
+            }
+
+            if (event.ctrlKey){
+                console.log('CTRL - OK')
+            }
+
+            if (event.ctrlKey && event.shiftKey){
+                console.log('CTRL SHIFT - OK')
+            }
+
+        })
+        // coordenadas mouse
+        document.querySelector('div').addEventListener('mousemove', () => {
+            console.log(event.pageX +':'+event.pageY)
+
+            // ALTERAR A COR DE FUNDO QUANDO O MOUSE ESTIVER MAIS A ESQUERDA
+            if (event.pageX <= 100) {
+                event.target.style.backgroundColor = 'red'
+            }
+            else if (event.pageX >= 600) {
+                event.target.style.backgroundColor = 'green'
+            }
+            else {
+                event.target.style.backgroundColor = 'yellow'
+            }
+        })
+    </script>
+</body>
+</html>

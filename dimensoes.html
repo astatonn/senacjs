@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            margin: 50px auto;
+            background-color: lightblue;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quod commodi debitis quae voluptate, numquam aliquid aspernatur molestiae itaque odio neque quos impedit similique ea nisi, odit, assumenda reiciendis cupiditate!
+        Tempore, vitae nisi autem aspernatur vero saepe recusandae atque! Enim facilis consectetur error laudantium impedit nostrum consequuntur fugiat? Vel assumenda eligendi veritatis quasi animi temporibus obcaecati pariatur eveniet quas excepturi!
+        Incidunt animi quae quidem expedita laboriosam dignissimos tempora sint sed, dolorum nulla consequuntur mollitia nobis enim, temporibus maiores soluta nihil fugit velit quo beatae? Quo voluptatem nihil nam quia. Alias!
+        Quidem quas, ipsam beatae quia sint omnis veniam aliquam recusandae minima rem magni atque tempore optio nobis dolor expedita cupiditate vero. Labore saepe natus debitis, qui sequi magni fugit nisi!
+        Cumque quaerat accusantium adipisci nemo facilis tenetur sapiente commodi accusamus rerum culpa soluta beatae ipsam iure vel vero, unde blanditiis nobis? Neque sunt quasi nostrum quos distinctio expedita blanditiis dolor.
+        Accusamus quis quod molestiae quidem nesciunt itaque harum, voluptatum quaerat amet porro impedit? Et ad facere delectus deleniti molestias cum nostrum explicabo iste. Fugiat quae quis quidem molestias voluptatibus. Sunt.
+        Quidem nihil iusto voluptas ipsa corrupti libero autem temporibus. At, incidunt neque atque nisi maxime fuga iste laudantium tempora temporibus repudiandae placeat maiores quia nulla, illum perferendis tempore vitae? Veniam?
+        Molestias quos alias praesentium natus quasi aliquam doloribus nam cum, similique, blanditiis quaerat quis neque eveniet officia labore corporis harum quas nihil expedita totam nostrum fugit! Doloribus voluptates ea culpa.
+    </div>
+
+    <p id="props"></p>
+    <button onclick="buscarProps()">Executar</button>
+
+    <script>
+        /* posição absoluta e dimensão absoluta de um elemento
+        para inserir novos elementos
+        */
+
+        function buscarProps(){
+            // buscar o elemento que queremos analisar
+            let div = document.querySelector('div')
+
+            // mostrar o resultado
+            let p = document.querySelector('#props')
+
+            let resultados = ''
+
+            // fazer concatenações
+            // offsetLeft -> distancia entre a margem esquerda e o início do conteúdo selecionado
+            resultados += 'offsetLeft = ' + div.offsetLeft + ' '
+            resultados += 'offsetTop = ' + div.offsetTop + ' '
+            resultados += 'offsetWidth = ' + div.offsetWidth + ' '
+            resultados += 'offsetHeight = ' + div.offsetHeight + ' '
+
+            // temos disponíveis o tamanho de scroll
+            resultados += 'scrollHeight = ' + div.scrollHeight + ' '
+
+            // posição do scroll
+            resultados += 'scrollTop = ' + div.scrollTop + ' '
+
+            p.innerText = resultado
+        }
+    </script>
+</body>
+</html>

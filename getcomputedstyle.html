@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 {
+            color: red;
+            margin-top: 50px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+    <p style="color: blue; margin-top: 20px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, a doloribus, tempore assumenda iste quis ut ab cum laborum accusamus rerum dicta. Modi sequi quas ea accusamus dicta pariatur? Dolor!</p>
+
+    <script>
+        // quais as propriedades que um elemento html possui
+    let p = document.querySelector('p')
+
+    // mostrar qual a cor definida
+    console.log(p.style.color)
+    console.log(p.style.marginTop)
+
+    let h1 = document.querySelector('h1')
+    console.log(h1.style.color)
+
+    // o style consegue pegar apenas os estilos definidos inline
+    // para verificar se existe uma propriedade definida
+    // com o getcomputedstyle (uma função de js)
+
+    let prop = getComputedStyle(h1)
+    console.log(prop.color)
+    console.log(h1.marginTop)
+    console.log(prop.border)
+
+    console.log(prop.borderWidth)
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="texto">
+
+    <script>
+        let el = document.querySelector('#texto')
+
+        el.addEventListener('keydown', (e) => {
+            // mostrar a tecla que está sendo pressionada
+            console.log(e.key)
+
+            // teclas especiais
+            console.log(e.code)
+
+            if(e.code == 'F1'){
+                e.preventDefault()
+                teste()
+            }
+
+            // qual o código da tecla
+            // compara com ASC-II 
+            console.log(e.wich)
+
+            console.log(e.KeyCode)
+        })
+
+        function teste (){
+            console.log('teste')
+        }
+    </script>
+</body>
+</html>

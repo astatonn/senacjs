@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid lightblue;
+            padding: 20px;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <p>Parágrafo dentro do div</p>
+        <ul>
+            <li><button id="op1" onclick="alterar('1')">destacar</button></li>
+            <li><button id="op2" onclick="alterar('2')">destacar</button></li>
+            <li><button id="op3" onclick="alterar('3')">destacar</button></li>
+        </ul>
+
+    </div>
+
+    <script>
+        let elemento = document.querySelectorAll('#container > ul > li')
+
+        function alterar (node){
+                for (let i = 0; i < elemento.length ; i ++){
+                    elemento[i].style.backgroundColor =  'white'
+                }
+                
+                elemento[node-1].style.backgroundColor = 'red'
+            }
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1 {
+            background-color: yellow;
+        }
+
+        .p2 {
+            background-color: green;
+        }
+
+        .p3 {
+            background-color: red;
+        }
+
+        .espaco {
+            padding: 10px;
+        }
+        .margin {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="p1 espaco">Lorem ipsum dolor sit amet consectetur.</p>
+    
+
+    <script>
+        /*
+            Com o js podemos alterar os estilos
+            mas preferencialmente devemos fazer isso com o css
+            utilizando classes
+
+            # classname
+            - É uma propriedade
+            - Pega toda a string do atributo class
+            - le a altera
+
+            # classlist
+            - retorna uma coleção de informações
+            - possui métodos add(), remove()
+        */
+
+        // buscar elemento
+        let p = document.querySelector('p')
+        p.className = 'p2 espaco'
+
+        let classes = p.classList
+        console.log(classes)
+
+        // adicionar classes
+        p.classList.add('p3')
+        p.classList.add('margin')
+        // remover classes
+        p.classList.remove('p2')
+
+        // adicionar ou remover a classe
+        p.classList.toggle('p2')
+
+        // verificar se uma classe existe no elemento
+        if(p.classList.contains('espaco')){
+            console.log('tem espaço')
+        }
+        else {
+            console.log('não tem espaço.')
+        }
+
+
+
+
+    </script>
+</body>
+</html>

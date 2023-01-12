@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="t1">Título 1</h1>
+    <h1 id="t2">Título 2</h1>
+
+    <button id="add"> Adicionar Eventos</button>
+    <button id="b">Executar Eventos</button>
+    <button id="rm">Remover Eventos</button>
+
+
+    <script>
+        /* 
+        adicionar e remover eventos
+        addEventListner -> adicionar eventos a um determinado elemento
+        removeEventListener -> remove eventos a um determinado elemento
+
+        // função para adicionar eventos
+        */
+
+        document.querySelector('#add').addEventListener('click', addEventos)
+        // OU document.querySelector('#add').addEventListener('click', () => ....)
+
+        function addEventos () {
+            // selecionar elemento
+            let el = document.querySelector('b')
+
+            // executar duas funções
+            el.addEventListener('click', fn1)
+            el.addEventListener('click', fn2)
+
+            function fn1 (){
+                let agora = new Date()
+                document.querySelector('#t1').textContent = agora.getSeconds()
+            }
+
+            function fn2 (){
+                let agora = new Date()
+                document.querySelector('#t2').textContent = agora.getSeconds()
+            }
+
+            // clicar em executar não acontece nada
+            // após adicionar eventos, o executar irá exibir o valor atualizado
+
+            document.querySelector('#rm').addEventListener('click', rmEventos)
+
+            function rmEventos(){
+                // quando clicar no botão
+                // remover o evento do elemento 2
+                document.querySelector('#b').removeEventListener('click', fn2)
+            }
+        }
+    </script>
+</body>
+</html>

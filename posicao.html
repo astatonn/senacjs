@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis sit deleniti nam? Vero dolore assumenda accusamus consectetur at dicta, cum voluptatibus exercitationem sequi odio quibusdam unde natus reiciendis ducimus inventore.
+        Odit officia illum reprehenderit, dolorem fuga perferendis placeat impedit rem magni alias pariatur ad, corrupti expedita quidem repellendus quos, tempore voluptates nam laborum. Corrupti minima assumenda dolores quos aspernatur odio?
+        Vel aliquid accusamus iste aut commodi quibusdam repudiandae obcaecati consequatur, ratione nulla ducimus mollitia accusantium eligendi suscipit alias id porro. Ipsum nisi quam eaque dolor veritatis amet enim molestiae aspernatur.
+        Non velit molestiae nemo, quos iste illum, quam nam minima natus dolor deleniti voluptates. Minus delectus harum suscipit hic nobis neque, deserunt quia minima, optio qui eligendi sequi dolor itaque.
+        Deserunt, tempore? Eveniet saepe quasi in, officia qui provident magnam sapiente rem. Sequi nobis ratione veniam. Odit dicta, commodi, nulla illum quis nisi accusamus eveniet temporibus, sapiente distinctio aut laudantium.
+        Numquam dignissimos est enim, minus veritatis maiores expedita tenetur quis omnis consectetur molestias ad aperiam delectus? Officia velit magnam, id sunt quia eius ratione, praesentium aliquid cumque quidem asperiores itaque?
+        Cum eligendi itaque consequuntur ad, perspiciatis dolorum minus labore voluptatum, deleniti repellat hic adipisci explicabo nostrum quae sapiente, magni praesentium similique error libero? Quos beatae obcaecati officia. Neque, eos eum!
+        Molestias molestiae dolore laborum, aperiam veritatis excepturi, maxime asperiores aspernatur dolorem consectetur impedit optio adipisci itaque mollitia quae quod quo omnis illum nam aliquam labore sequi? Natus neque dolor iure.
+        Perspiciatis aperiam repellat velit saepe iste quo ratione laborum odit neque perferendis consequuntur rem recusandae quia totam id, laudantium dignissimos. Laborum harum vero expedita maxime accusantium! In nemo corrupti fugit?
+        Natus, expedita distinctio corrupti suscipit quam labore facilis iusto ad quibusdam dicta deserunt recusandae doloremque dolor asperiores, adipisci numquam eius molestias repellendus voluptatum, consequatur officiis hic quo praesentium. Nam, blanditiis?
+        Voluptatem debitis rerum optio doloremque qui dolore quidem nesciunt. Eum aliquid rem deleniti quod sapiente eos amet deserunt sunt, autem, impedit tempora blanditiis provident saepe, similique dignissimos architecto sit ipsam.
+        Temporibus quam, pariatur numquam incidunt voluptatibus provident? Earum accusantium molestiae dicta fuga facilis nulla odio inventore, eveniet provident. Assumenda a quasi doloribus sed ullam adipisci aut eligendi nobis ipsum dicta.
+        Et numquam sunt eligendi voluptatum explicabo libero dolorum ad tenetur fugit error ex quasi ratione molestiae nesciunt, consequatur a itaque nihil accusamus quibusdam eveniet. Odio a suscipit aliquid sapiente illo!
+        Numquam earum ipsam vitae! Dolorem sapiente laudantium, mollitia, minus repudiandae necessitatibus optio doloremque voluptatem officiis labore, totam qui temporibus quos ad quae quasi autem. Id laudantium aspernatur odio consectetur nulla!
+        Atque dolore necessitatibus temporibus ea quidem? Nostrum fugit id voluptatum voluptate quas doloribus quaerat unde possimus animi itaque, quos error praesentium velit ullam. Voluptate a similique, quidem quos placeat velit!
+    </div>
+
+    <script>
+        function buscarProps(){
+            // verificar a largura e altura do conteúdo e da janela
+            // alterar o tamanho da janela e do tamanho do conteúdo
+
+            // ver a largura visível do conteúdo
+            console.log('Largura do documento '+ document.documentElement.clientWidth)
+
+            // ver a altura visível do conteúdo
+            console.log('Largura do documento '+ document.documentElement.clientHeight)
+
+            // ver a altura completa do conteúdo
+            console.log('Largura do documento '+ document.documentElement.scrollHeight) 
+
+            // ver a largura do scroll
+            console.log('Largura do documento '+ document.documentElement.scrollWidth)
+
+            // adicionar scroll vertical
+            /*
+            div style="width: 1200px;"
+
+            continuar testes alterando largura e altura
+            */
+
+            function executar (){
+
+                // fazer a página deslocar para deternada posição
+                
+                window.scrollTo(0,200)
+
+                // possui um booleano
+                // o valor verdadeiro vai para o início da página
+                // se for falso, vai para o final da página
+                document.documentElement.scrollIntoView()
+
+                // cadência para o ritmo do scrolling
+                // pode ter valor positivo ou negativo
+                window.scrollBy(0, 50)
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 30px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <div>Este é o meu elemento</div>
+
+    <script>
+        // EVENTOS DE MOUSE É UMA DAS PRINCIPAIS MANEIRAS DE OTIMIZAR A EXPERIêNCIA DO USUÁRIO
+
+        // evento click
+        // evento só acontece quando o botão do mouse é clicado e solto
+        document.querySelector('div').addEventListener('click', () => {
+            console.log('click')
+        })
+
+        // mouse down é quando executa-se a ação de pressionar o botão do mouse
+        document.querySelector('div').addEventListener('mousedown', () => {
+            console.log('mouse down')
+        })
+
+        // mouse up é quando executa-se a ação de soltar o botão do mouse que estava pressionado
+        document.querySelector('div').addEventListener('mouseup', () => {
+            console.log('mouse up')
+        })
+
+        // Quando o mouse entrar de determinado elemento.
+        document.querySelector('div').addEventListener('mouseenter', () => {
+            console.log('mouse enter')
+        })
+
+        // quando o mouse sai de um determinado elemento
+        document.querySelector('div').addEventListener('mouseleave', () => {
+            console.log('Mouse Leave')
+        })
+
+        // quando o mouse for movimentado dentro de um elemento
+        document.querySelector('div').addEventListener('mousemove', () => {
+            console.log('mouse move')
+        })
+
+        // click duplo
+        document.querySelector('div').addEventListener('dblclick', () => {
+            console.log('duplo click')
+        })
+
+        // context menu -> quando clica com o botão direito
+        document.querySelector('div').addEventListener('contextmenu', () => {
+            console.log('menu de contexto')
+        })
+
+
+        
+    </script>
+    
+</body>
+</html>
